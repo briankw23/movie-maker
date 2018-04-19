@@ -18,8 +18,8 @@ const domOutput = () => {
     domString += `<div>`;
     domString += `<h1>${categories[i].categoryName}</h1>`;
     for (let j = 0; j < movieStuff.length; j++) {
-      if (movieStuff[i].id === categories[i].id) {
-        domString += `${movieStuff[i].name}`;
+      if (movieStuff[j].categoryId === categories[i].id) {
+        domString += `${movieStuff[j].name}`;
         domString += `</div>`;
       };
     };
