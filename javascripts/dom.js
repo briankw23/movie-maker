@@ -19,7 +19,12 @@ const domOutput = () => {
     domString += `<h1>${categories[i].categoryName}</h1>`;
     for (let j = 0; j < movieStuff.length; j++) {
       if (movieStuff[j].categoryId === categories[i].id) {
+        domString += `<div class="checkbox disabled">`;
+        domString += `<label>`;
+        domString += `<input type="checkbox" value="" disabled>`;
         domString += `${movieStuff[j].name}`;
+        domString += `</label>`;
+        domString += `</div>`;
         domString += `</div>`;
       };
     };
