@@ -4,24 +4,24 @@ const checkedItemEvent = () => {
     item[i].addEventListener('change', (e) => {
       if (item[i].checked) {
         console.log('item checked', e);
+        addToBudget(e);
       }
       else {
         console.log('item uncheck', e);
+        removeFromBudget(e);
       };
     });
   };
 };
 
-// const addCheckBoxEventLarge = () => {
-//   checkbox.addEventListener('change', (e) => {
-//     const messagesBody = document.getElementById('messages');
-//     if (e.target.checked) {
-//       messagesBody.classList.add('largeMarge');
-//     }
-//     else {
-//       messagesBody.classList.remove('largeMarge');
-//     }
-//   });
-// };
+const addToBudget = (e) => {
+  const checkTarget = e.target.nextSibling.data;
+  console.log('checked target',checkTarget);
+};
+
+const removeFromBudget = (e) => {
+  const checkTarget = e.target.nextSibling.data;
+  console.log('unchecked target', checkTarget);
+};
 
 module.exports = checkedItemEvent;
