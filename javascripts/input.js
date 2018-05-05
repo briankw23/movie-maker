@@ -24,11 +24,11 @@ const disable = () => {
   for (let i = 0; i < inputs.length; i++) {
     inputs[i].disabled = false;
   };
-  check();
+  check(budget);
 };
 const printToDom = () => {
   const domTarget = document.getElementById('secondary');
-  domTarget.innerHTML = budget;
+  domTarget.innerHTML = `<div id="bud">$${budget}</div>`;
 };
 
 module.exports = budgetEvent;

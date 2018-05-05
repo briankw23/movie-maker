@@ -1,6 +1,9 @@
 const dom = require('./dom');
 
-const checkedItemEvent = () => {
+let budget = '';
+
+const checkedItemEvent = (totalB) => {
+  budget = totalB;
   const item = document.getElementsByClassName('chex');
   for (let i = 0; i < item.length; i++) {
     item[i].addEventListener('change', (e) => {
@@ -14,6 +17,7 @@ const checkedItemEvent = () => {
       };
     });
   };
+  console.log('budget', budget);
 };
 
 let movieStuff = [];
@@ -29,12 +33,19 @@ const addToBudget = (e) => {
       domString += `<div>`;
       domString += `<h4>${movieStuff[i].name}: $${movieStuff[i].cost}</h4>`;
       domString += `</div>`;
+      budget -= movieStuff[i].cost;
     };
   };
-  printToDom(domString);
+  addToDom(domString);
+  updateBudget(budget);
 };
 
-const printToDom = (string) => {
+const updateBudget = (budget) => {
+  const domTarget = document.getElementById('bud');
+  domTarget.innerHTML = `$${budget}`;
+};
+
+const addToDom = (string) => {
   const domTarget = document.getElementById('secondary');
   domTarget.innerHTML += string;
 };
