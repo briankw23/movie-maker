@@ -9,19 +9,19 @@
     {
       "id":2,
       "categoryId":2,
-      "name":"Chris Paul",
+      "name":"Air Bud",
       "cost": 100
     },
     {
       "id":3,
       "categoryId":3,
-      "name":"Nashville, TN",
+      "name":"Nashville",
       "cost": 100
     },
     {
       "id":4,
       "categoryId":4,
-      "name":"Lebron James",
+      "name":"Live Action",
       "cost": 100
     },
     {
@@ -39,13 +39,13 @@
     {
       "id":7,
       "categoryId":3,
-      "name":"New York, NY",
+      "name":"New York",
       "cost": 100
     },
     {
       "id":8,
       "categoryId":4,
-      "name":"Air-Bud",
+      "name":"Stop Motion",
       "cost": 100
     },
     {
@@ -69,151 +69,151 @@
     {
       "id":12,
       "categoryId":4,
-      "name":"Bily the Bear",
+      "name":"Staging",
       "cost": 100
     },
     {
       "id":13,
       "categoryId":1,
-      "name":"name-13",
+      "name":"Sid",
       "cost": 100
     },
     {
       "id":14,
       "categoryId":2,
-      "name":"name-14",
+      "name":"Jerry the Mouse",
       "cost": 100
     },
     {
       "id":15,
       "categoryId":3,
-      "name":"name-15",
+      "name":"Portland",
       "cost": 100
     },
     {
       "id":16,
       "categoryId":4,
-      "name":"name-16",
+      "name":"3D",
       "cost": 100
     },
     {
       "id":17,
       "categoryId":1,
-      "name":"name-17",
+      "name":"Gary",
       "cost": 100
     },
     {
       "id":18,
       "categoryId":2,
-      "name":"name-18",
+      "name":"Bugs Bunny",
       "cost": 100
     },
     {
       "id":19,
       "categoryId":3,
-      "name":"name-19",
+      "name":"Paris",
       "cost": 100
     },
     {
       "id":20,
       "categoryId":4,
-      "name":"name-20",
+      "name":"CGI",
       "cost": 100
     },
     {
       "id":21,
       "categoryId":1,
-      "name":"name-21",
+      "name":"Fred",
       "cost": 100
     },
     {
       "id":22,
       "categoryId":2,
-      "name":"name-22",
+      "name":"Harambe's Brother",
       "cost": 100
     },
     {
       "id":23,
       "categoryId":3,
-      "name":"name-23",
+      "name":"Denver",
       "cost": 100
     },
     {
       "id":24,
       "categoryId":4,
-      "name":"name-24",
+      "name":"Matte painting",
       "cost": 100
     },
     {
       "id":25,
       "categoryId":1,
-      "name":"name-25",
+      "name":"Zach",
       "cost": 100
     },
     {
       "id":26,
       "categoryId":2,
-      "name":"name-26",
+      "name":"Courage the Cowardly Dog",
       "cost": 100
     },
     {
       "id":27,
       "categoryId":3,
-      "name":"name-27",
+      "name":"Outer Space",
       "cost": 100
     },
     {
       "id":28,
       "categoryId":4,
-      "name":"name-28",
+      "name":"Compositing",
       "cost": 100
     },
     {
       "id":29,
       "categoryId":1,
-      "name":"name-29",
+      "name":"Kate",
       "cost": 100
     },
     {
       "id":30,
       "categoryId":2,
-      "name":"name-30",
+      "name":"Bigfoot",
       "cost": 100
     },
     {
       "id":31,
       "categoryId":3,
-      "name":"name-31",
+      "name":"Dallas",
       "cost": 100
     },
     {
       "id":32,
       "categoryId":4,
-      "name":"name-32",
+      "name":"Modeling",
       "cost": 100
     },
     {
       "id":33,
       "categoryId":1,
-      "name":"name-33",
+      "name":"Buzz",
       "cost": 100
     },
     {
       "id":34,
       "categoryId":2,
-      "name":"name-34",
+      "name":"101 Dalmatians",
       "cost": 100
     },
     {
       "id":35,
       "categoryId":3,
-      "name":"name-35",
+      "name":"Miami",
       "cost": 100
     },
     {
       "id":36,
       "categoryId":4,
-      "name":"name-36",
+      "name":"Animation",
       "cost": 100
     }
   ]
