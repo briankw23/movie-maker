@@ -10,6 +10,9 @@ const setBudget = (e) => {
   const budgetAmount = e.target.parentNode.childNodes[1].value;
   budget = budgetAmount * 1;
   console.log(budget);
+  e.target.parentNode.childNodes[3].setAttribute('disabled', 'disabled');
+  e.target.parentNode.classList.add('disabled');
+  e.target.parentNode.childNodes[1].disabled = true;
   disable();
 };
 
