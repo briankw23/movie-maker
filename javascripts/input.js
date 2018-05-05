@@ -1,6 +1,6 @@
 const check = require('./check');
 
-let budget = [];
+let budget = '';
 
 const budgetEvent = () => {
   const budgetTarget = document.getElementById('budget');
@@ -16,6 +16,7 @@ const stuffBudget = (e) => {
   e.target.parentNode.classList.add('disabled');
   e.target.parentNode.childNodes[1].disabled = true;
   disable();
+  printToDom();
 };
 
 const disable = () => {
@@ -24,6 +25,10 @@ const disable = () => {
     inputs[i].disabled = false;
   };
   check();
+};
+const printToDom = () => {
+  const domTarget = document.getElementById('secondary');
+  domTarget.innerHTML = budget;
 };
 
 module.exports = budgetEvent;

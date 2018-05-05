@@ -12,6 +12,14 @@ const movieSet = (dataMovie) => {
   domOutput();
 };
 
+const categoriesGet = () => {
+  return categories;
+};
+
+const moviesGet = () => {
+  return movieStuff;
+};
+
 const domOutput = () => {
   let domString = '';
   for (let i = 0; i < categories.length; i++) {
@@ -42,4 +50,6 @@ const printToDom = (domString) => {
 module.exports = {
   categorySet,
   movieSet,
+  categoriesGet,
+  moviesGet,
 };
