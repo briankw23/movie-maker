@@ -16,14 +16,21 @@ const domOutput = () => {
   let domString = '';
   for (let i = 0; i < categories.length; i++) {
     domString += `<div>`;
-    domString += `<h1>${categories[i].categoryName}</h1>`;
+    domString += `<h3>${categories[i].categoryName}</h3>`;
+    domString += `</div>`;
     for (let j = 0; j < movieStuff.length; j++) {
-      if (movieStuff[i].id === categories[i].id) {
-        domString += `${movieStuff[i].name}`;
+      if (movieStuff[j].categoryId === categories[i].id) {
+        domString += `<div class="checkbox">`;
+        domString += `<ul class="list-inline">`;
+        domString += `<label>`;
+        domString += `<input class="chex" type="checkbox" disabled>`;
+        domString += `${movieStuff[j].name}`;
+        domString += `</label>`;
+        domString += `</ul>`;
         domString += `</div>`;
       };
     };
-  };console.log(domString);
+  };
   printToDom(domString);
 };
 
