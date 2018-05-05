@@ -20,10 +20,10 @@ const domOutput = () => {
     domString += `</div>`;
     for (let j = 0; j < movieStuff.length; j++) {
       if (movieStuff[j].categoryId === categories[i].id) {
-        domString += `<div class="checkbox disabled">`;
+        domString += `<div class="checkbox">`;
         domString += `<ul class="list-inline">`;
         domString += `<label>`;
-        domString += `<input type="checkbox" value="" disabled>`;
+        domString += `<input class="chex" type="checkbox" disabled>`;
         domString += `${movieStuff[j].name}`;
         domString += `</label>`;
         domString += `</ul>`;

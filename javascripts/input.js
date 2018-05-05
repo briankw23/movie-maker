@@ -7,9 +7,17 @@ const getBudget = () => {
 
 const setBudget = (e) => {
   console.log(e);
-  const budgetTarget = e.target.parentNode.childNodes[1].value;
-  budget = budgetTarget * 1;
+  const budgetAmount = e.target.parentNode.childNodes[1].value;
+  budget = budgetAmount * 1;
   console.log(budget);
+  disable();
+};
+
+const disable = () => {
+  const inputs = document.getElementsByClassName('chex');
+  for (let i = 0; i < inputs.length; i++) {
+    inputs[i].disabled = false;
+  };
 };
 
 module.exports = getBudget;
