@@ -15,7 +15,7 @@ const movieSet = (dataMovie) => {
 const domOutput = () => {
   let domString = '';
   for (let i = 0; i < categories.length; i++) {
-    domString += `<div>`;
+    domString += `<div class=".col-md-8">`;
     domString += `<h3>${categories[i].categoryName}</h3>`;
     domString += `</div>`;
     for (let j = 0; j < movieStuff.length; j++) {

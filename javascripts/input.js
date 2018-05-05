@@ -1,11 +1,13 @@
+const check = require('./check');
+
 let budget = [];
 
-const getBudget = () => {
+const budgetEvent = () => {
   const budgetTarget = document.getElementById('budget');
-  budgetTarget.addEventListener('click', setBudget);
+  budgetTarget.addEventListener('click', stuffBudget);
 };
 
-const setBudget = (e) => {
+const stuffBudget = (e) => {
   console.log(e);
   const budgetAmount = e.target.parentNode.childNodes[1].value;
   budget = budgetAmount * 1;
@@ -21,6 +23,7 @@ const disable = () => {
   for (let i = 0; i < inputs.length; i++) {
     inputs[i].disabled = false;
   };
+  check();
 };
 
-module.exports = getBudget;
+module.exports = budgetEvent;
