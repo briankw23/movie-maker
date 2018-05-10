@@ -42,7 +42,7 @@ const addToBudget = (e) => {
 
 const updateBudget = (budget) => {
   const domTarget = document.getElementById('bud');
-  domTarget.innerHTML = `$${budget}`;
+  domTarget.innerHTML = `<h3 class="green">$${budget}</h3>`;
 };
 
 const addToDom = (string) => {

@@ -28,7 +28,7 @@ const disable = () => {
 };
 const printToDom = () => {
   const domTarget = document.getElementById('secondary');
-  domTarget.innerHTML = `<div id="bud">$${budget}</div>`;
+  domTarget.innerHTML = `<div id="bud"><h3 class="green">$${budget}</h3></div>`;
 };
 
 module.exports = budgetEvent;
