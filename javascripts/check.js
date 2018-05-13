@@ -30,7 +30,7 @@ const addToBudget = (e) => {
   let domString = '';
   for (let i = 0; i < movieStuff.length; i++) {
     if (checkTarget === movieStuff[i].name) {
-      domString += `<div>`;
+      domString += `<div id="${movieStuff[i].name}">`;
       domString += `<h4>${movieStuff[i].name}: $${movieStuff[i].cost}</h4>`;
       domString += `</div>`;
       budget -= movieStuff[i].cost;
@@ -52,7 +52,20 @@ const addToDom = (string) => {
 
 const removeFromBudget = (e) => {
   const checkTarget = e.target.nextSibling.data;
-  console.log('unchecked target', checkTarget);
+  console.log('unchecked target',checkTarget);
+
+  const removeFromList = document.getElementById(checkTarget);
+  removeFromList.remove();
+
+  movieStuff = dom.moviesGet();
+  console.log(movieStuff);
+  for (let i = 0; i < movieStuff.length; i++) {
+    if (checkTarget === movieStuff[i].name) {
+      budget += movieStuff[i].cost;
+    };
+  };
+
+  updateBudget(budget);
 };
 
 module.exports = checkedItemEvent;
