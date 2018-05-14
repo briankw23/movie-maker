@@ -23,7 +23,7 @@ const moviesGet = () => {
 const domOutput = () => {
   let domString = '';
   for (let i = 0; i < categories.length; i++) {
-    domString += `<div class=".col-md-8">`;
+    domString += `<div class="${categories[i].categoryName}">`;
     domString += `<h3>${categories[i].categoryName}</h3>`;
     domString += `</div>`;
     for (let j = 0; j < movieStuff.length; j++) {
@@ -31,7 +31,7 @@ const domOutput = () => {
         domString += `<div class="checkbox">`;
         domString += `<ul class="list-inline">`;
         domString += `<label>`;
-        domString += `<input class="chex" type="checkbox" disabled>`;
+        domString += `<input data-id=${movieStuff[j].categoryId} class="chex" type="checkbox" disabled>`;
         domString += `${movieStuff[j].name}`;
         domString += `</label>`;
         domString += `</ul>`;

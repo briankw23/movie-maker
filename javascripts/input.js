@@ -17,6 +17,12 @@ const stuffBudget = (e) => {
   e.target.parentNode.childNodes[1].disabled = true;
   disable();
   printToDom();
+  selectCats();
+};
+
+const selectCats = () => {
+  const target = document.getElementById('maker');
+  target.innerHTML = 'Select items from each Category to make a Movie!';
 };
 
 const disable = () => {
