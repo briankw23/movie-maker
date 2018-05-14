@@ -9,31 +9,24 @@
   <link rel="stylesheet" href="./styles/main.css" >
 </head>
 <body>
-        <!-- <div class="container-fluid panel panel-success">
-            <div class="panel-heading">
-              <h3 class="panel-title">Movie Builder</h3>
-              <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                    <span class="sr-only">60% Complete</span>
-                  </div>
-              </div>
-        </div> -->
-        <div>
-        <input type="text" placeholder="Set Budget"> <button id="budget" class="btn btn-default" type="submit"><span class="glyphicon glyphicon-usd"></span></button>
-        </div>
-
-            <div class="panel-body">
-            <div class="row">
-
-                <div id="main" class=".col-md-8"></div>
-
-                <div id="secondary" class=".col-md-4 pull-right"></div>
-
-            </div>
-
-          </div>
-          </div>
-
+  <div class="container-fluid">
+  <div>
+    <input type="text" placeholder="Set Budget"> <button id="budget" class="btn btn-default" type="submit"><span class="glyphicon glyphicon-usd"></span></button>
+  </div>
+  <div class="progress">
+    <div id="actors" class="progress-bar progress-bar-success hide" style="width: 25%">Actors and Actresses</div>
+    <div id="animals" class="progress-bar progress-bar-info hide" style="width: 25%">Animals and Trainers</div>
+    <div id="locations" class="progress-bar progress-bar-warning hide" style="width: 25%">Locations</div>
+    <div id="special" class="progress-bar progress-bar-danger hide" style="width: 25%">Special Effects</div>
+  </div>
+  <div class="row">
+    <div id="maker" class="col-md-8">Set Budget to make a Movie!</div>
+  </div>
+      <div class="row">
+        <div id="main" class="col-md-8"></div>
+        <div id="secondary" class="col-md-4"></div>
+      </div>
+</div>
 
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"

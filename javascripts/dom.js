@@ -12,10 +12,18 @@ const movieSet = (dataMovie) => {
   domOutput();
 };
 
+const categoriesGet = () => {
+  return categories;
+};
+
+const moviesGet = () => {
+  return movieStuff;
+};
+
 const domOutput = () => {
   let domString = '';
   for (let i = 0; i < categories.length; i++) {
-    domString += `<div>`;
+    domString += `<div class="${categories[i].categoryName}">`;
     domString += `<h3>${categories[i].categoryName}</h3>`;
     domString += `</div>`;
     for (let j = 0; j < movieStuff.length; j++) {
@@ -23,7 +31,7 @@ const domOutput = () => {
         domString += `<div class="checkbox">`;
         domString += `<ul class="list-inline">`;
         domString += `<label>`;
-        domString += `<input class="chex" type="checkbox" disabled>`;
+        domString += `<input data-id=${movieStuff[j].categoryId} class="chex" type="checkbox" disabled>`;
         domString += `${movieStuff[j].name}`;
         domString += `</label>`;
         domString += `</ul>`;
@@ -42,4 +50,6 @@ const printToDom = (domString) => {
 module.exports = {
   categorySet,
   movieSet,
+  categoriesGet,
+  moviesGet,
 };
