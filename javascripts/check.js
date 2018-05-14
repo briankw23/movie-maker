@@ -13,11 +13,9 @@ const checkedItemEvent = (totalB) => {
   for (let i = 0; i < item.length; i++) {
     item[i].addEventListener('change', (e) => {
       if (item[i].checked) {
-        console.log('item checked', e);
         addToBudget(e);
       }
       else {
-        console.log('item uncheck', e);
         removeFromBudget(e);
       };
     });
@@ -38,6 +36,8 @@ const addToBudget = (e) => {
   } else if (parseInt(checkTargetID) === 4) {
     cat4 += 1;
   };
+  progress1();
+  console.log('checked target', 'C1', cat1,'C2', cat2,'C3', cat3,'C4', cat4);
   movieStuff = dom.moviesGet();
   let domString = '';
   for (let i = 0; i < movieStuff.length; i++) {
@@ -57,7 +57,6 @@ const updateBudget = (budget) => {
   const domTarget = document.getElementById('bud');
   domTarget.innerHTML = `<h3 id="num" class="green">$${budget}</h3>`;
   progress1();
-  progress2();
 };
 const budgetColor = () => {
   const color = document.getElementById('num');
@@ -85,6 +84,7 @@ const removeFromBudget = (e) => {
   } else if (parseInt(checkTargetID) === 4) {
     cat4 -= 1;
   };
+  progress1();
   const removeFromList = document.getElementById(checkTarget);
   removeFromList.remove();
   console.log('unchecked target', 'C1', cat1,'C2', cat2,'C3', cat3,'C4', cat4);
@@ -99,34 +99,37 @@ const removeFromBudget = (e) => {
 };
 
 const progress1 = () => {
+  const actors = document.getElementById('actors');
+  const animals = document.getElementById('animals');
+  const locations = document.getElementById('locations');
+  const special = document.getElementById('special');
   if (cat1 >= 1) {
-    const actors = document.getElementById('actors');
     actors.classList.remove('hide');
-  } else if (cat2 >= 1) {
-    const animals = document.getElementById('animals');
-    animals.classList.remove('hide');
-  } else if (cat3 >= 1) {
-    const locations = document.getElementById('locations');
-    locations.classList.remove('hide');
-  } else if (cat4 >= 1) {
-    const special = document.getElementById('special');
-    special.classList.remove('hide');
+  } else {
+    actors.classList.add('hide');
   }
+  if (cat2 >= 1) {
+    animals.classList.remove('hide');
+  } else {
+    animals.classList.add('hide');
+  }
+  if (cat3 >= 1) {
+    locations.classList.remove('hide');
+  } else {
+    locations.classList.add('hide');
+  }
+  if (cat4 >= 1) {
+    special.classList.remove('hide');
+  } else {
+    special.classList.add('hide');
+  }
+  makeMovie();
 };
 
-const progress2 = () => {
-  if (cat1 <= 0) {
-    const actors = document.getElementById('actors');
-    actors.classList.add('hide');
-  } else if (cat2 <= 0) {
-    const animals = document.getElementById('animals');
-    animals.classList.add('hide');
-  } else if (cat3 <= 0) {
-    const locations = document.getElementById('locations');
-    locations.classList.add('hide');
-  } else if (cat4 <= 0) {
-    const special = document.getElementById('special');
-    special.classList.add('hide');
+const makeMovie = () => {
+  if (cat1 && cat2 && cat3 && cat4 >= 1) {
+    const target = document.getElementById('maker');
+    target.innerHTML = 'Good news! You can make this movie!';
   }
 };
 
