@@ -2,7 +2,6 @@ const http = require('./movies');
 const http2 = require('./categories');
 const dom = require('./dom');
 const input = require('./input');
-const check = require('./check');
 
 const successXhr = function () {
   const dataMovie = JSON.parse(this.responseText).elements;
@@ -28,7 +27,6 @@ const initializer = () => {
   http2(successXhr2,failXhr2);
   http(successXhr,failXhr);
   input();
-  check();
 };
 
 module.exports = {
