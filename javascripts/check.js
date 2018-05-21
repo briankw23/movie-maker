@@ -130,7 +130,7 @@ const makeMovie = () => {
   const color = document.getElementById('num');
   if (cat1 && cat2 && cat3 && cat4 >= 1 && color > 0) {
     const target = document.getElementById('maker');
-    target.innerHTML = 'Good news! You can make this movie!';
+    target.innerHTML = 'Good news! You can make this movie!!!';
   }
 };
 
